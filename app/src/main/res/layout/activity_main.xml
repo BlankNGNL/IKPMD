@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.drynl.ikmpd.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <Button
+        android:text="West"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonNoord"
+        android:layout_toRightOf="@+id/buttonNoord"
+        android:layout_toEndOf="@+id/buttonNoord"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:id="@+id/buttonWest"
+        android:onClick="openWest" />
+
+    <Button
+        android:text="Noord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="121dp"
+        android:id="@+id/buttonNoord"
+        android:onClick="openNoord"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/buttonOost" />
+
+    <Button
+        android:text="Zuid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonOost"
+        android:layout_alignLeft="@+id/buttonWest"
+        android:layout_alignStart="@+id/buttonWest"
+        android:id="@+id/buttonZuid"
+        android:onClick="openZuid" />
+
+    <Button
+        android:text="Oost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonOost"
+        android:onClick="openOost"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="86dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/gebruikersNaamField"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/buttonNoord"
+        android:layout_alignStart="@+id/buttonNoord"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordText"
+        android:layout_below="@+id/gebruikersNaamField"
+        android:layout_alignLeft="@+id/gebruikersNaamField"
+        android:layout_alignStart="@+id/gebruikersNaamField"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordText"
+        android:layout_toLeftOf="@+id/buttonWest"
+        android:layout_toStartOf="@+id/buttonWest"
+        android:layout_marginTop="32dp"
+        android:id="@+id/button"
+        android:onClick="login" />
+
+    <Button
+        android:text="ChartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignLeft="@+id/buttonWest"
+        android:layout_alignStart="@+id/buttonWest"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp"
+        android:id="@+id/ChartButton" />
+
+    <Button
+        android:text="BarChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:id="@+id/BarChart"
+        android:layout_above="@+id/buttonWest"
+        android:layout_alignLeft="@+id/ChartButton"
+        android:layout_alignStart="@+id/ChartButton" />
+</RelativeLayout>
